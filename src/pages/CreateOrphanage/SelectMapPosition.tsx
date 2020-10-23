@@ -32,14 +32,14 @@ export default function SelectMapPosition() {
         style={styles.mapStyle}
         onPress={handleSelectMapPosition}
       >
-        {position.latitude !== 0 && (
+        {!!position.latitude && (
           <Marker
           icon={mapMarkerImg}
           coordinate={{ latitude: position.latitude, longitude: position.longitude}}
         />
         )}
         </MapView>
-        {position.latitude !== 0 && (
+        {!!position.latitude && (
           <RectButton style={styles.nextButton} onPress={handleNextStep}>
             <Text style={styles.nextButtonText}>Próximo</Text>
           </RectButton>
