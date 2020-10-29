@@ -20,7 +20,7 @@ export default function OrphanagesMap() {
     const navigation = useNavigation();
 
     useFocusEffect(() => {
-        api.get('orphanages').then(response => {
+        api.get(`orphanages/status/${1}`).then(response => {
             setOrphanages(response.data);
         });
     });
